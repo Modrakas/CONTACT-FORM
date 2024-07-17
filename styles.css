@@ -1,0 +1,43 @@
+@font-face { 
+  font-family: 'sligoil-micro'; 
+  /* font-weight: regular;  */
+  src: url('sligoil-micro.woff');
+}
+
+
+* {
+  font-family: 'sligoil-micro', sans-serif;
+  background-color: hsl(0, 0%, 93%);;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+input,
+  textarea {
+  width: 100%;
+  padding: 5px;
+  border: 0.5px solid black;
+  border-radius: 2px;
+}
+
+label {
+  line-height: 1.9rem;
+}
+
+.submit-btn {
+ transform: translate(2.2%);
+ padding: 5px 10px;
+ margin-top: 0.6rem;
+ border: 0.5px solid black;
+ border-radius: 2px;
+}
+
+fieldset {
+ padding: 20px 40px;
+ border-radius: 2px;
+}
