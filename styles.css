@@ -4,10 +4,33 @@
   src: url('sligoil-micro.woff');
 }
 
+:root {
+  --header-height: 3.5rem;
+
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --black-color: hsl(0, 0%, 20%);
+  --black-color-light: hsl(0, 0%, 40%);
+  --white-color: hsl(0, 0%, 92%);
+  --body-color: hsl(0, 0%, 87%);
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "sligoil-micro", sans-serif;
+  --h2-font-size: 1.5rem;
+  --h3-font-size: 1.125rem;
+  --small-font-size: .813rem;
+
+  /*========== Font weight ==========*/
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+}
+
 
 * {
-  font-family: 'sligoil-micro', sans-serif;
-  background-color: hsl(0, 0%, 93%);;
+  font-family: var(--body-font);
+  background-color: var(--body-color);
 }
 
 body {
@@ -17,27 +40,48 @@ body {
   height: 100vh;
 }
 
+legend {
+  font-size: var(--h2-font-size);
+  font-weight: var(--font-semi-bold);
+}
+
 input,
   textarea {
   width: 100%;
-  padding: 5px;
-  border: 0.5px solid black;
-  border-radius: 2px;
+  padding: .6em;
+  border: 0.14em solid var(--black-color);
+  border-radius: .15em;
+  font-size: var(--small-font-size);
+  font-weight: var(--font-regular);
+}
+
+input:focus, textarea:focus {
+  border: .15em solid var(--white-color);
+  outline: .1em solid var(--white-color);
+  
 }
 
 label {
-  line-height: 1.9rem;
+  line-height: 1.9em;
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-medium);
 }
 
 .submit-btn {
- transform: translate(2.2%);
- padding: 5px 10px;
- margin-top: 0.6rem;
- border: 0.5px solid black;
- border-radius: 2px;
+ padding: .5em .9em;
+ margin-top: 0.6em;
+ border: 0.5px solid var(--black-color);
+ border-radius: .15em;
+ font-size: var(--small-font-size);
+ font-weight: var(--font-medium);
+}
+
+.submit-btn:hover {
+  transform: scale(1.2);
+  margin-left: .6em;
 }
 
 fieldset {
- padding: 20px 40px;
+ padding: 2em 3em;
  border-radius: 2px;
 }
